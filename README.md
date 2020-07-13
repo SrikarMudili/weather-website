@@ -1,2 +1,2 @@
-#  ꜜꜜꜜꜜ my resume website
-[Resume](https://srikar-resume.herokuapp.com/)
+#  ꜜꜜꜜꜜ my weather website
+[Resume](https://weather-website-srikar.herokuapp.com/)
