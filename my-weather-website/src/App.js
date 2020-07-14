@@ -4,11 +4,11 @@ import './App.css';
 
 
 function getWOEID(city) {
-  return axios.get("https://www.metaweather.com/api/location/search/?query=" + city);
+  return axios.get("/api/location/search/?query=" + city);
 }
 
 function getWeather(WOEID) {
-  return axios.get("https://www.metaweather.com/api/location/" + WOEID);
+  return axios.get("/api/location/" + WOEID);
 }
 
 class App extends React.Component {
