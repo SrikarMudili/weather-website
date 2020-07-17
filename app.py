@@ -19,7 +19,7 @@ def get_WOEID():
     return response.text
 
 
-@app.route("/api/location/<woeid>")
+@app.route("/api/location/<woeid>/")
 def get_weather(woeid):
     response = requests.get(f"https://www.metaweather.com/api/location/{woeid}")
     return response.text
