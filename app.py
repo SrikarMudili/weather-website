@@ -13,13 +13,13 @@ CORS(app)
 def get_WOEID():
     query_value = request.args.get('query')
     response = requests.get(f"https://www.metaweather.com/api/location/search/?query={query_value}")
-    return response.json()
+    return response.text
 
 
 @app.route("/api/location/<woeid>")
 def get_weather(woeid):
     response = requests.get(f"https://www.metaweather.com/api/location/{woeid}")
-    return response.json()
+    return response.text
 
 
 # run the application
