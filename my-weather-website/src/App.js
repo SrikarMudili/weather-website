@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   render() {
-
+    var weather = this.state.weather
 
 
     return (
@@ -33,11 +33,14 @@ class App extends React.Component {
                 getWeather(WOEID).then(response => {
                   var weather = response.data;
                   console.log(weather);
+                  this.setState({weather:weather});
                 })
               }
             })
         }} />
+        {this.state.weather == null ? (<h4> Weather is loading </h4>) :<div>
           
+          </div>}
       </div>
     );
   }
