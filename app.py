@@ -8,11 +8,14 @@ import requests
 app = Flask(__name__, static_folder='static', static_url_path='')
 CORS(app)
 
+@app.route("/")
+def index():
+    return send_from_directory('static', 'index.html')
 
 @app.route("/api/location/search")
 def get_WOEID():
     query_value = request.args.get('query')
-    response = requests.get(f"https://www.metaweather.com/api/location/search/?query={query_value}")
+    response = requests.get(f"https://www.metaweather.com/api/location/search?query={query_value}")
     return response.text
 
 
