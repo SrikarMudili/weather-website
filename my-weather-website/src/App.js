@@ -4,7 +4,7 @@ import './App.css';
 
 
 function getWOEID(city) {
-  return axios.get("api/location/search/?query=" + city);
+  return axios.get("api/location/search?query=" + city);
 }
 
 function getWeather(WOEID) {
