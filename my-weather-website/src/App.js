@@ -39,7 +39,10 @@ class App extends React.Component {
             })
         }} />
         {this.state.weather == null ? (<h4> Weather is loading </h4>) :<div>
-          
+          <h3 className="bg-danger"> WEATHER: </h3>
+            <ul className="bg-danger">
+              {this.state.weather.map(<li className='list-group-item'>{weather}</li>)}
+            </ul>
           </div>}
       </div>
     );
